@@ -1,7 +1,7 @@
 ---
 title: "Map Example"
 author: "John W. Hoggard"
-date: "6/21/2017"
+date: "6/22/2017"
 output: ioslides_presentation
 ---
 
@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 ## Slide with Leaflet Map
+Created 6/22/2017
 
 ```{r, echo=FALSE}
 library(leaflet)
