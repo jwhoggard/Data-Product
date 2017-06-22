@@ -1,5 +1,5 @@
 ---
-title: "Example"
+title: "Map Example"
 author: "John W. Hoggard"
 date: "6/21/2017"
 output: ioslides_presentation
@@ -9,27 +9,21 @@ output: ioslides_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## R Markdown
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+## Slide with Leaflet Map
 
-## Slide with Bullets
-
-- Bullet 1
-- Bullet 2
-- Bullet 3
-
-## Slide with R Output
-
-```{r cars, echo = TRUE}
-summary(cars)
+```{r, echo=FALSE}
+library(leaflet)
+EUicon <- makeIcon(
+     iconUrl = "http://www.edinboro.edu/application/themes/edinboro/images/template/EU-logo.png",
+     iconWidth=34*4, iconHeight=8.9*4, iconAnchorX=68, iconAnchorY=0
+)
+my_map <- leaflet() %>%
+     addTiles() %>%
+     addMarkers(lat = 41.870315, lng = -80.124686, popup="John's Office", icon=EUicon)
+my_map
 ```
 
-## Slide with Plot
 
-```{r pressure}
-plot(pressure)
-```
 
